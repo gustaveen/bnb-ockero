@@ -1,0 +1,31 @@
+.heading {
+    font-family: $din;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: .01em;
+    // margin-left: auto;
+    // margin-right: auto;
+
+    &--m {
+        font-size: map-get($fontsize, xl);
+        margin-bottom: 20px;
+    }
+
+    &--center {
+        text-align: center;
+    }
+
+    &--line {
+        display: inline-block;
+        padding-bottom: 20px;
+        background: url("../images/header-border.svg") no-repeat;
+        background-position: center bottom;
+        background-size: auto 14px;
+    }
+
+    @include media(md) {
+        &--m {
+            font-size: map-get($fontsize, xxl);
+        }
+    }
+}

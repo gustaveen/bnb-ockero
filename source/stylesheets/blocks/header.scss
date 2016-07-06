@@ -1,0 +1,26 @@
+.header {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    top: 0;
+    width: 100%;
+    z-index: $z-index--header;
+    color: #fff;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        max-width: map-get($maxwidths, xl);
+        padding: 15px 20px;
+        width: 100%;
+
+        @include media(md) {
+                padding: 20px 0;
+        }
+
+        @include media(lg) {
+            align-items: center;
+            display: flex;
+        }
+    }
+}

@@ -1,0 +1,111 @@
+.accommodation {
+    $path: #{map-get($paths, 'img')};
+
+    padding-bottom: 40px;
+
+    &__container {
+        @include grid-container;
+    }
+
+    &__preamble {
+        text-align: left;
+    }
+
+    &__item {
+        width: 100%;
+        padding-bottom: 20px;
+        background-color: palette(white);
+    }
+
+    &__header {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    &__image-container {
+        position: relative;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+    }
+
+    &__price {
+        position: absolute;
+        bottom: 20px;
+        right: 0;
+        padding: 6px map-get($padding, sm) 4px 14px;
+        color: palette(white);
+        background-color: palette(black, trans);
+    }
+
+    &__title-container {
+        display: flex;
+        align-items: baseline;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin-bottom: 0;
+        line-height: 1;
+    }
+
+    &__pers {
+        padding-top: 8px;
+        background-repeat: no-repeat;
+        background-position: bottom 3px left;
+        background-size: 35px;
+        font-family: $din;
+        font-size: 2rem;
+        font-weight: 400;
+        color: #848484;
+
+        &--one {
+            padding-left: 33px;
+            background-image: url('#{$path}/icon-one-pers.svg');
+        }
+
+        &--two {
+            padding-left: 45px;
+            background-image: url('#{$path}/icon-two-pers.svg');
+        }
+    }
+
+    &__text {
+        padding-left: map-get($padding, sm);
+        padding-right: map-get($padding, sm);
+        line-height: 1.15;
+    }
+
+    @include media(md) {
+
+
+        &__item {
+            // width: 50%;
+            @include grid(.5, lg);
+            margin-bottom: map-get($gutters, lg);
+            padding-bottom: 20px;
+        }
+    }
+
+    @include media(lg) {
+
+        &__container {
+            max-width: 1240px;
+            padding-left: map-get($gutters, lg);
+            padding-right: map-get($gutters, lg);
+        }
+
+        &__section-title {
+            //margin-bottom: 70px;
+        }
+
+        &__header {
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+    }
+}

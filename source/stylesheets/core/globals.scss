@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: $yrsa;
+    font-size: 62.5%;
+    color: palette(black, 80);
+}
+
+body {
+    font-size: map-get($fontsize, lg);
+    line-height: 1.32;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@include media(md) {
+    body {
+        font-size: map-get($fontsize, xl);
+    }
+}
+

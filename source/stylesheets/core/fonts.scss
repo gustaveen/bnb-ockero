@@ -1,0 +1,81 @@
+$path: #{map-get($paths, 'fonts')};
+
+@font-face {
+    font-family: 'yrsa';
+    src: url('#{$path}/yrsa-light-webfont.eot');
+    src: url('#{$path}/yrsa-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$path}/yrsa-light-webfont.woff2') format('woff2'),
+         url('#{$path}/yrsa-light-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yrsa';
+    src: url('#{$path}/yrsa-regular-webfont.eot');
+    src: url('#{$path}/yrsa-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$path}/yrsa-regular-webfont.woff2') format('woff2'),
+         url('#{$path}/yrsa-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yrsa';
+    src: url('#{$path}/yrsa-medium-webfont.eot');
+    src: url('#{$path}/yrsa-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$path}/yrsa-medium-webfont.woff2') format('woff2'),
+         url('#{$path}/yrsa-medium-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yrsa';
+    src: url('#{$path}/yrsa-semibold-webfont.eot');
+    src: url('#{$path}/yrsa-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$path}/yrsa-semibold-webfont.woff2') format('woff2'),
+         url('#{$path}/yrsa-semibold-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'yrsa';
+    src: url('#{$path}/yrsa-bold-webfont.eot');
+    src: url('#{$path}/yrsa-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('#{$path}/yrsa-bold-webfont.woff2') format('woff2'),
+         url('#{$path}/yrsa-bold-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dan';
+    src: url('#{$path}/din-light.eot');
+    src: url('#{$path}/din-light.eot?#iefix') format('embedded-opentype'),
+         url('#{$path}/din-light.woff2') format('woff2'),
+         url('#{$path}/din-light.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dan';
+    src: url('#{$path}/din.eot');
+    src: url('#{$path}/din.eot?#iefix') format('embedded-opentype'),
+         url('#{$path}/din.woff2') format('woff2'),
+         url('#{$path}/din.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dan';
+    src: url('#{$path}/din-bold.eot');
+    src: url('#{$path}/din-bold.eot?#iefix') format('embedded-opentype'),
+         url('#{$path}/din-bold.woff2') format('woff2'),
+         url('#{$path}/din-bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}

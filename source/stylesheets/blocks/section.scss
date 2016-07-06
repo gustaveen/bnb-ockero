@@ -1,0 +1,22 @@
+.section {
+
+    &__container {
+        max-width: map-get($maxwidths, xl);
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: map-get($padding, sm);
+        padding-right: map-get($padding, sm);
+    }
+
+    &__preamble {
+        max-width: 580px;
+        text-align: left;
+    }
+
+    @include media(md) {
+        &__preamble {
+            font-size: map-get($fontsize, xl);
+            line-height: 1.6;
+        }
+    }
+}

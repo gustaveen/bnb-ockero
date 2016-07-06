@@ -1,0 +1,89 @@
+$paths: (
+    img: '../images',
+    fonts: '../fonts'
+);
+
+$breakpoints: (
+    sm: 480px,
+    md: 768px,
+    lg: 1024px,
+);
+
+$maxwidths: (
+    sm: 480px,
+    md: 768px,
+    lg: 960px,
+    xl: 1240px,
+);
+
+$gutters: (
+    default: 0,
+    sm: 10px,
+    md: 20px,
+    lg: 30px,
+    xl: 40px
+);
+
+$padding: (
+    default: 15px,
+    sm: 20px,
+    md: 20px,
+    lg: 40px
+);
+
+$palettes: (
+    red: (
+        default: #ff0000,
+        50: lighten(#ff0000, 50%)
+    ),
+    black: (
+        default: #000,
+        80: #333,
+        trans: rgba(0,0,0,0.72)
+    ),
+    white: (
+        default: #ffffff,
+        94: darken(#ffffff, 26%)
+    ),
+    blue: (
+        default: #0000ff,
+        50: darken(#0000ff, 50%)
+    ),
+    purple: (
+        default: #ff69b4,
+        50: darken(#ff69b4, 20%)
+    ),
+    bg: (
+        default: #FAF8F6,
+        20: #f7f7f4
+    )
+);
+
+$fontsize: (
+    d: 1rem,
+    xxs: 1rem,
+    xs: 1.4rem,
+    sm: 1.6rem,
+    md: 1.8rem,
+    lg: 2rem,
+    xl: 2.4rem,
+    xxl: 2.8rem,
+    xxxl: 4.8rem
+);
+
+$din: 'dan', serif;
+$yrsa: 'yrsa', serif;
+
+// Z-index
+$z-index-1: 100;
+$z-index-2: 200;
+$z-index-3: 300;
+$z-index-4: 400;
+$z-index-5: 500;
+$z-index-6: 600;
+$z-index-7: 700;
+$z-index-8: 800;
+$z-index-9: 900;
+$z-index-10: 1000;
+
+$z-index--header: $z-index-2;

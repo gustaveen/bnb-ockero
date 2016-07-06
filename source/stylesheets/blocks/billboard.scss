@@ -1,0 +1,44 @@
+.billboard {
+    //max-width: 1240px;
+    position: relative;
+    // margin-bottom: 40px;
+
+    &__image {
+
+    }
+
+    &__info {
+        margin-top: 20px;
+        padding-left: map-get($padding, sm);
+        padding-right: map-get($padding, sm);
+    }
+
+    @include media(lg) {
+        display: flex;
+        flex-wrap: wrap;
+        // padding-left: map-get($gutters, lg);
+        // padding-right: map-get($gutters, lg);
+
+        &__image {
+            width: 57%;
+            height: 100%;
+
+        }
+
+        &__image-2 {
+            display: block;
+            width: 43%;
+            background: url('../images/cykel.jpg') no-repeat;
+            background-size: cover;
+            background-position: center;
+
+        }
+
+        // &__info {
+        //     width: 43%;
+        //     margin-top: 0;
+        //     color: palette(white);
+        //     background-color: #727b77;
+        // }
+    }
+}

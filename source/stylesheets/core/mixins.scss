@@ -1,0 +1,32 @@
+@mixin media($key) {
+    @if map-has-key($breakpoints, $key) {
+        @media (min-width: map-get($breakpoints, $key)) {
+            @content;
+        }
+    } @else {
+        @error 'Unfortunately, no value could be retrieved from `#{$breakpoints}`. '
+        + 'Please make sure it is defined in `$breakpoints` map.';
+    }
+}
+
+@mixin font-size($font-type : 'base', $font-size : 'md', $lh : 1) {
+
+    @if map-has-key($fonttypes, $font-type) {
+        $font-type-properties: map-get($fonttypes, $font-type);
+
+        @if map-has-key($font-type-properties, $font-size) {
+            $font-size-properties: map-get($font-type-properties, $font-size);
+
+            font-size: #{map-get($font-size-properties, font-size)}rem;
+
+            @if $lh == 1 {
+                line-height: #{map-get($font-size-properties, line-height)};
+            }
+
+        } @else {
+            @error 'Unfortunately, no `#{$font-size}` could be retrieved from `#{$font-type}`.';
+        }
+    } @else {
+        @error 'Unfortunately, no value could be retrieved from  `#{$font-type}`.';
+    }
+}

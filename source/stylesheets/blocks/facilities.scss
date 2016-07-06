@@ -1,0 +1,105 @@
+.facilities {
+    $path: #{map-get($paths, 'img')};
+
+    &__header {
+        padding-top: 0;
+    }
+
+    &__list {
+        width: 100%;
+        max-width: 600px;
+        margin-top: 50px;
+        text-align: left;
+    }
+
+    p {
+        display: inline-block;
+        font-family: $din;
+    }
+
+
+    &__item {
+        //text-align: center;
+        margin-bottom: 25px;
+        padding-top: 4px;
+        padding-left: 40px;
+        background-repeat: no-repeat;
+        background-position: left 26px top;
+        background-size: 34px;
+        background-position: left 0 top 2px;
+
+        &--cup {
+            background-image: url('#{$path}/icon-cup.svg');
+            // background-position: left 48px top 2px;
+        }
+
+        &--laundry {
+            background-image: url('#{$path}/icon-laundry.svg');
+            // background-position: left 48px top 2px;
+        }
+
+        &--towel {
+            background-image: url('#{$path}/icon-towel.svg');
+            // background-position: left 48px top 2px;
+        }
+
+        &--shower {
+            background-image: url('#{$path}/icon-shower.svg');
+            // background-position: left 48px top 2px;
+        }
+
+        &--wifi {
+            background-image: url('#{$path}/icon-wifi.svg');
+            // background-position: left 48px top 2px;
+        }
+
+        &--lock {
+            background-image: url('#{$path}/icon-lock.svg');
+            // background-position: left 48px top 2px;
+        }
+
+    }
+
+    @include media(sm) {
+        &__item {
+            float: left;
+            width: 50%;
+            background-position: left 26px top;
+            background-position: left 0 top 2px;
+        }
+
+    }
+
+    @include media(md) {
+        &__item {
+            float: left;
+            width: 50%;
+            //text-align: center;
+            margin-bottom: 25px;
+            padding-top: 4px;
+            padding-left: 94px;
+            background-repeat: no-repeat;
+            background-position: left 26px top;
+            background-size: 34px;
+            background-position: left 48px top 2px;
+        }
+
+        &__main {
+            @include grid-container;
+        }
+
+        &__item {
+            padding-left: 64px;
+            min-height: 70px;
+            background-position: left 20px top 2px;
+        }
+
+        &__list {
+            width: calc(50% - (30px - 30px * 0.5));
+        }
+
+        &__slideshow {
+            width: calc(50% - (30px - 30px * 0.5));
+        }
+    }
+}

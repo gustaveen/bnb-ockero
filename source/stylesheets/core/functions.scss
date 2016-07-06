@@ -1,0 +1,31 @@
+// Core mixins
+@mixin grid-container() {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+@mixin grid($width, $key: 'd') {
+    $gutter: get-default($gutters, $key);
+    $percentage: percentage($width);
+    // Testa oss fram, kanske 0 0 auto
+    flex: 0 1 auto;
+    @if ($gutter == 0) {
+        width: #{$percentage};
+    } @else {
+        width: calc(#{$percentage} - (#{$gutter} - #{$gutter} * #{$width}));
+    }
+}
+
+@function palette($palette, $tone: 'default') {
+    @return map-get(map-get($palettes, $palette), $tone);
+}
+
+// Returns a key value if it exsists
+@function get-default($map, $key: 'default') {
+    $value: $key;
+    @if map-has-key($map, $key) {
+        $value: map-get($map, $key);
+    }
+    @return $value;
+}

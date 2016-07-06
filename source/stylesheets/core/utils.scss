@@ -1,0 +1,61 @@
+.u {
+
+    &-clearfix {
+        zoom: 1;
+
+        &::before {
+            content: '';
+            display: block;
+        }
+
+        &::after {
+            clear: both;
+            content: '';
+            display: table;
+        }
+    }
+
+    &-center {
+        margin: 0 auto;
+    }
+
+    &-text-center {
+        text-align: center;
+    }
+
+    &-wrap {
+        padding-left: map-get($gutters, lg);
+        padding-right: map-get($gutters, lg);
+    }
+
+    &-wrap--sm {
+        @include media(sm) {
+            max-width: map-get($maxwidths, sm) + map-get($gutters, sm) * 2;
+        }
+    }
+
+    &-wrap--md {
+        @include media(md) {
+            max-width: map-get($maxwidths, md) + map-get($gutters, lg) * 2;
+            padding-left: map-get($gutters, lg);
+            padding-right: map-get($gutters, lg);
+        }
+    }
+
+    &-wrap--lg {
+        @include media(lg) {
+            max-width: map-get($maxwidths, xl) + map-get($gutters, lg) * 2;
+            padding-left: map-get($gutters, lg);
+            padding-right: map-get($gutters, lg);
+        }
+    }
+
+    &-sr {
+        // Text meant only for screen readers.
+        clip: rect(1px, 1px, 1px, 1px);
+        height: 1px;
+        overflow: hidden;
+        position: absolute !important;
+        width: 1px;
+    }
+}
